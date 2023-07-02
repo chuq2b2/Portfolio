@@ -1,0 +1,362 @@
+@font-face {
+    font-family: 'Sunflower';
+    src: url(resources/MADE\ Sunflower\ PERSONAL\ USE.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    font-family: 'Sunflower', 'Merriweather', 'San Serif';
+    background-color: #1c1f33ff;
+    color: #666370ff;
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*-------------HEADER--------------*/
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 10000;
+}
+
+nav,
+nav ul,
+nav h3,
+nav li,
+nav a {
+    background-color: rgb(3, 3, 26);
+}
+
+.add-shadow {
+    box-shadow: rgba(18, 19, 20, 0.3) 0px 2px 2px 0px;
+}
+
+nav {
+    padding: 1rem;
+    padding-bottom: 1rem;
+}
+
+nav h3 {
+    display: inline-block;
+}
+
+nav li {
+    display: block;
+    float: right;
+    width: 100px;
+    margin: 0px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+nav li a:hover {
+    color: #fbfef9ff;
+    transition: 0.4s all ease;
+}
+
+/* nav a {
+    text-decoration: none;
+    transition: border-bottom 0.3s all ease;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #a63446ff;
+} */
+
+nav a {
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #a63446ff;
+    transition: width 0.3s;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/*------------ABOUT SECTION---------------*/
+#about {
+    width: 98vw;
+    height: 98vh;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+}
+
+#about h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a63446ff;
+    /* text-shadow: #9b7874ff 1px 1px 2px; */
+    padding-top: 3rem
+}
+
+#about h3 {
+    color: #fbfef9ff;
+    opacity: 90%;
+    padding-top: 1rem;
+    letter-spacing: 1px;
+}
+
+.introduction {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    width: 45%;
+    padding: 6rem 3rem 6rem 9rem;
+}
+
+#profile-photo {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    padding: 6rem 3rem 6rem 3rem;
+    margin-left: 3rem;
+}
+
+.resize {
+    width: 300px;
+    height: auto;
+}
+
+.dynamic-txts {
+    color: #7e1946ff;
+    position: relative;
+}
+
+.dynamic-txts::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    height: 100%;
+    width: 100%;
+    background-color: #1c1f33ff;
+    border-left: 2px solid #7e1946ff;
+    animation: typing 3s steps(9) infinite;
+}
+
+@keyframes typing {
+
+    40%,
+    60% {
+        left: calc(100% + 20px);
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+button {
+    background: none;
+    border: 0;
+    position: relative;
+    font-size: 16px;
+}
+
+button a {
+    background-color: transparent;
+    text-decoration: none;
+    color: #0c6291ff;
+}
+
+button::after {
+    content: '';
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #000004ff;
+
+    position: absolute;
+    left: -10px;
+    top: -30%;
+
+    opacity: 0.7;
+    z-index: -1;
+
+    transition: 0.3s all ease;
+    /* transform: scaleX(0);
+    transform-origin: left; */
+}
+
+button:hover::after {
+    border-radius: 25px;
+    width: 120px;
+    transform: scaleX(1) all ease;
+    transition: 0.3s all ease;
+}
+
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+/*---------------MY PROJECTS-----------------*/
+#projects {
+    width: 98vw;
+    height: 98vh;
+    position: relative;
+}
+
+#projects h1 {
+    padding: 5rem 0 0 0;
+    justify-content: center;
+
+}
+
+#projects h2 {
+    padding: 1rem 3rem;
+}
+
+.centered-heading {
+    text-align: center;
+}
+
+#gameCanvas {
+    margin: 1rem;
+}
+
+.right-item {
+    position: inline-block;
+    margin: 30px;
+}
+
+.game-container {
+    position: relative;
+}
+
+.game-note {
+    display: inline-block;
+    align-items: center;
+    justify-items: center;
+    /* margin: 5rem 0; */
+}
+
+.content {
+    margin-left: auto;
+    text-align: center;
+    /* padding: 5rem 0; */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 3rem 5rem;
+}
+
+.small-image {
+    width: 400px;
+    height: auto;
+}
+
+img.open-new-tab:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .text-overlay {
+    opacity: 0.5;
+}
+
+.hidden-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/*---------------FOOTER------------------------*/
+
+footer {
+    /* background-color: linear-gradient(0deg, #1c1f33ff, #000004ff); */
+    /* background-color: black; */
+    margin: 50px;
+    padding: 3rem 0 0rem 3rem;
+    justify-content: center;
+    align-items: center;
+    /* display: inline-block; */
+}
+
+#contact1 {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+#contact1 p {
+    line-height: 2rem;
+}
+
+#social {
+    display: inline-block;
+    align-items: center;
+}
+
+#social li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 1rem;
+    /* padding: 1rem 1rem 2rem 1rem; */
+}
+
+#social i {
+    font-size: 30px;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+#social i:hover {
+    color: #fbfef9ff;
+    opacity: 0.7;
+    transition: 0.3 all ease;
+}
+
+#contact2 {
+    display: block;
+    float: right;
+    margin-right: 3rem;
+    /* padding-left: 30%; */
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+#contact2 p {
+    line-height: 2rem;
+}
